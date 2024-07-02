@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --primary: #2CC9FF;
+    --primary-dark: #20a3cf;
+    --secondary: #004656;
+    /* text */
+    --text-primary: #292929;
+    --text-secondary: #BDBDBD;
+    /* text */
+
+    --white: #fff;
+    --lightwhite: #fdfdfd;
+    --black: #000;
+    --dark-bg: #556b2f14;
+    --dark-border: #556b2f7a;
+
+    --shadow-1: 0px 16px 24px 0px rgba(85, 107, 47, 0.24);
+    /* Transition */
+    --transition-half-Sec: 0.5s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::after,
+::before {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: none !important;
+    border-color: none !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-family: "Roboto", sans-serif;
+    color: var(--white);
+    /* background-color: var(--black); */
+    background-color: #0B1215;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {}
+
+.containerwidth {
+    width: 100%;
+    margin: auto 0;
+    transition: width 0.2s ease-in-out;
+}
+
+.containerwidth.zoomed-out {
+    margin: auto;
+    width: 1400px;
+}
+
+.head-b-bottom {
+    border-bottom: 1px solid var(--components-divider, rgba(59, 113, 127, 0.20)) !important;
+}
+
+.border-primary {
+    border: 1px solid var(--components-divider, rgba(59, 113, 127, 0.20)) !important;
+}
+
+.border-primary-left {
+    border-left: 1px solid var(--components-divider, rgba(59, 113, 127, 0.20)) !important;
+}
+
+.border-primary-right {
+    border-right: 1px solid var(--components-divider, rgba(59, 113, 127, 0.20)) !important;
+}
+
+.border-primary-bottom {
+    border-bottom: 1px solid var(--components-divider, rgba(59, 113, 127, 0.20)) !important;
+}
+
+.bg-secondary {
+    background-color: rgba(59, 113, 127, 0.08);
+}
+
+.h1 {
+    font-family: Poppins;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 800;
+}
+
+.h2 {
+    font-family: Poppins;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+}
+
+.h2 span {
+    color: var(--main-light-primary, #2CC9FF);
+    font-family: Poppins;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+}
+
+.h3 {
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+
+
+.h5 {
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.h5.medium {
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.h5.small {
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.h5.large {}
+
+.p {
+    color: var(--text-secondary, rgba(255, 255, 255, 0.72));
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.p.small {
+    color: var(--text-secondary, rgba(255, 255, 255, 0.72));
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+span.remove {
+    color: var(--main-light-error, #FF5630);
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+span.widthall {
+    display: flex;
+    height: 30px;
+    min-width: var(--button-min-width, 64px);
+    padding: 0px var(--button-text-small-px, 4px);
+    justify-content: center;
+    align-items: center;
+    color: var(--main-light-primary, #2CC9FF);
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    gap: var(--button-spacing, 8px);
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    display: flex;
+    height: var(--textfield-medium-height, 53px);
+    align-items: center;
+    gap: var(--field-global-spacing, 0px);
+    align-self: stretch;
+    border-radius: var(--textfield-filled-radius, 8px);
+    background: var(--grey-8, rgba(59, 113, 127, 0.08));
+    overflow: hidden;
+    color: var(--text-disabled, rgba(255, 255, 255, 0.32));
+    text-overflow: ellipsis;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 0px 12px !important;
+}
+
+input:focus {
+    outline: none;
+}
+
+.input:focus {
+    outline: none !important;
+}
+
+.primary-clr {
+    color: #2CC9FF;
+}
+
+.themebtn {
+    color: var(--black);
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    padding: 12px 16px;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: var(--primary);
+    border: 1px solid var(--primary);
+    transition: 0.5s ease-in-out;
+}
+
+.themebtn:hover {
+    background: var(--primary-dark);
+    border: 1px solid var(--primary-dark);
+}
+
+.themebtn-trans {
+    color: var(--primary);
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: transparent;
+    border: 1px solid var(--primary);
+    transition: 0.5s ease-in-out;
+}
+
+.themebtn-trans:hover {
+    color: var(--black);
+    background: var(--primary);
+}
+
+
+.themebtn-trans-dark {
+    color: var(--dark-light-primary, #1677B7);
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    border-radius: var(--button-radius, 8px);
+    background: var(--primary-8, rgba(44, 201, 255, 0.08));
+    display: flex;
+    height: var(--button-large-height, 48px);
+    width: fit-content;
+    padding: 0px var(--button-large-px, 16px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--button-spacing, 8px);
+}
+
+.themebtn-white {
+    color: var(--black);
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    padding: 12px 16px;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: var(--white);
+    border: 1px solid var(--primary);
+    transition: 0.5s ease-in-out;
+}
+
+.themeBtn-dislable {
+    display: flex;
+    height: var(--button-small-height, 30px);
+    /* min-width: var(--button-min-width, 64px); */
+    width: 100%;
+    padding: 0px var(--button-small-px, 8px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--button-spacing, 8px);
+    align-self: stretch;
+    border-radius: var(--button-radius, 8px);
+    background: var(--action-disabled-bg, rgba(59, 113, 127, 0.20));
+    color: var(--action-disabled, rgba(59, 113, 127, 0.80));
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.themeBtn-small {
+    display: flex;
+    height: var(--button-small-height, 30px);
+    /* min-width: var(--button-min-width, 64px); */
+    width: 100%;
+    padding: 0px var(--button-small-px, 8px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--button-spacing, 8px);
+    align-self: stretch;
+    border-radius: var(--button-radius, 8px);
+    background: var(--main-light-primary, #2CC9FF);
+    color: #000;
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.themeBtn-small-white {
+    display: flex;
+    height: var(--button-small-height, 30px);
+    /* min-width: var(--button-min-width, 64px); */
+    width: 100%;
+    padding: 0px var(--button-small-px, 8px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--button-spacing, 8px);
+    align-self: stretch;
+    border-radius: var(--button-radius, 8px);
+    background: var(--main-light-primary, #fff);
+    color: #000;
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+
+
+.min-1440 {
+    min-width: 1440px;
+    border: 1px solid red;
+}
+
+.total-coin-price {
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    display: flex;
+    height: 53px;
+    min-width: var(--button-min-width, 64px);
+    padding: 0px var(--button-large-px, 16px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--button-spacing, 8px);
+    border-radius: var(--button-radius, 8px);
+    background: var(--grey-8, rgba(59, 113, 127, 0.08));
+}
+
+.form-item {
+    position: relative;
+    margin-bottom: 15px
+}
+
+.form-item input {
+    display: block;
+    width: 100%;
+    height: 54px;
+    background: transparent;
+    border-radius: var(--textfield-outlined-radius, 8px);
+    border: 2px solid var(--components-textfield-outline, rgba(255, 255, 255, 0.20));
+    transition: all .3s ease;
+    padding: 0 15px
+}
+
+label {
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.form-item input:focus {
+    border-color: rgba(255, 255, 255, 0.555);
+}
+
+.form-item label {
+    position: absolute;
+    cursor: text;
+    z-index: 2;
+    top: 18.5px;
+    left: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    background: #0B1215;
+    padding: 0 10px;
+    color: #999;
+    transition: all .3s ease
+}
+
+.form-item input:focus+label,
+.form-item input:valid+label {
+    font-size: 11px;
+    top: -5px
+}
+
+.form-item input:focus+label {
+    color: rgba(255, 255, 255, 0.555);
+}
+
+
+.InviteFriends-box {
+    position: relative;
+    display: flex;
+    height: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: var(--progress-linear-radius, 500px);
+    background: var(--primary-24, rgba(44, 201, 255, 0.24));
+}
+
+.InviteFriends-box::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 123.62px !important;
+    height: 8px;
+    border-radius: 50px;
+    background: var(--primary-main, #2CC9FF);
+}
+
+.InviteFriends-box-completed {
+    position: relative;
+    display: flex;
+    height: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: var(--progress-linear-radius, 500px);
+    background: var(--primary-24, rgba(44, 201, 255, 0.24));
+}
+
+.InviteFriends-box-notStarted {
+    position: relative;
+    display: flex;
+    height: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: var(--progress-linear-radius, 500px);
+    background-color: #596366;
+}
