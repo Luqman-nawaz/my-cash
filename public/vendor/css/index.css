@@ -60,6 +60,47 @@
 .header .rightmenu-container .userIcon-header-box img {
   width: 100%;
 }
+.header .burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+}
+.header .burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff !important;
+  margin: 5px 0;
+}
+.header .sidebar {
+  height: 100vh;
+  width: 280px;
+  position: fixed;
+  top: 0;
+  left: -280px;
+  background-color: #004656;
+  transition: left 0.3s ease;
+}
+.header .close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: #fff;
+}
+.header .close-btn span {
+  color: var(--Text-primary, #FFF);
+  font-family: Karla;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+}
 
 /********** Header End **********/
 /********** Hero Start **********/
@@ -273,7 +314,8 @@ Footer .footer-down {
 
 /********** OFFER PAGE START **********/
 .offers-parent-container .offers-head-container .offer-filters-window .offer-search-container {
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   display: flex;
   align-items: center;
   border-radius: var(--textfield-outlined-radius, 8px);
@@ -916,4 +958,104 @@ Footer .footer-down {
 }
 .user-content-container .user-contentinner-container-width-five:nth-child(5) {
   width: 15% !important;
+}
+
+@media (max-width: 930px) {
+  .header .burger {
+    display: block;
+  }
+  .header .sidebar {
+    width: 280px;
+  }
+  .header .mob-logo {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding: 15px 0px;
+  }
+  .header .mob-logo img {
+    margin-left: 10px;
+  }
+  .header .menu-container-mob {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+  .header .menu-container-mob a {
+    color: var(--Text-primary, #FFF);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    margin-right: 40px;
+    padding: 10px 15px;
+  }
+  .header .buttonmob-container {
+    padding: 10px 15px;
+  }
+  .header .buttonmob-container button {
+    margin-bottom: 10px;
+  }
+  .header .leftmenu-container,
+  .header .rightmenu-container {
+    display: none !important;
+  }
+  .BestWay-window-all .bestWay-box-3 {
+    width: 100% !important;
+  }
+  .BestWay-window-all .bestWay-box-4 {
+    width: 100%;
+  }
+  .Join-window-all .Join-window-box {
+    padding: var(--spacing-32, 20px);
+  }
+  Footer .footer-down {
+    padding: 64px 0px 0px 16px;
+  }
+  .tabs-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .tab {
+    float: unset;
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .tab button {
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+  }
+  .tab button.active {
+    border-bottom: 2px solid var(--main-light-primary, #2CC9FF);
+    border-right: unset;
+  }
+  .LeaderBoard-container .user-content-container .user-contentinner-container {
+    padding: 5px;
+  }
+  .pagination a {
+    font-size: 14px;
+    padding: 5px;
+    opacity: 0.48;
+  }
+  .paymethod-window-center-head {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 10px !important;
+  }
+}
+@media (max-width: 600px) {
+  .tab {
+    float: unset;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .paymethod-window-center-head {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
 }/*# sourceMappingURL=index.css.map */

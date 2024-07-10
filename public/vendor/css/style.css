@@ -356,6 +356,41 @@ input:focus {
     cursor: pointer;
 }
 
+.themebtn-trans-dark-secondaryLight {
+    color: var(--text-secondary, rgba(255, 255, 255, 0.72));
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    display: flex;
+    height: var(--toggle-button-standalone-medium-size, 48px);
+    min-width: var(--toggle-button-standalone-medium-size, 48px);
+    padding: 0px var(--toggle-button-standalone-medium-p, 12px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--toggle-button-spacing, 8px);
+    border-radius: var(--toggle-button-radius, 8px);
+    border: 1px solid var(--components-button-outlined, rgba(255, 255, 255, 0.32));
+}
+
+.themebtn-trans-dark-secondaryLight.active {
+    color: var(--main-light-primary, #2CC9FF);
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    display: flex;
+    height: var(--toggle-button-standalone-medium-size, 48px);
+    min-width: var(--toggle-button-standalone-medium-size, 48px);
+    padding: 0px var(--toggle-button-standalone-medium-p, 12px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--toggle-button-spacing, 8px);
+    border-radius: var(--toggle-button-radius, 8px);
+    border: 1px solid var(--main-light-primary, #2CC9FF);
+    background: var(--primary-8, rgba(44, 201, 255, 0.08));
+}
+
 
 
 
@@ -475,4 +510,16 @@ label {
     align-self: stretch;
     border-radius: var(--progress-linear-radius, 500px);
     background-color: #596366;
+}
+
+
+@media (max-width: 930px) {
+    
+.h2 span {
+    color: var(--main-light-primary, #2CC9FF);
+    font-family: Poppins;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+}
 }
